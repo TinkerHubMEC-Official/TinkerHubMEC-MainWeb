@@ -95,8 +95,8 @@ body {
 .contact-icons i {
     margin: 10px;
     cursor: pointer;
-    color: #aaa;
-    transition: color 0.3s ease;
+    color: #333;
+    transition: color 0.3s ease;  
 }
 
 .contact-icons i:hover {

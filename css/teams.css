@@ -158,7 +158,7 @@ a{
 
 .team-social a{
   margin: 0px 5px;
-  color: white;
+  color: #333;
   font-size: 0.9rem;
   transition: all ease 0.3s;
 }
