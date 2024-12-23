@@ -288,11 +288,11 @@ a{
 .teamSwiper .team-box {
   border: 4px solid transparent;
   border-radius: 20px;
-  border-image: linear-gradient(90deg, #615cff, #ff80b1 70%, #f3b500);
-  z-index: -1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* border-image: linear-gradient(90deg, #615cff, #ff80b1 70%, #f3b500);
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
-  border-image-slice: 9;
+  border-image-slice: 9; */
   text-align: center;
   padding-bottom: 50px;
   width: 200px;
