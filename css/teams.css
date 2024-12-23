@@ -128,7 +128,6 @@ a{
   height: 100%;
   object-fit: contain;
   object-position: bottom;
-  
 }
 
 .t-b-text{
@@ -164,7 +163,7 @@ a{
 }
 
 .team-social a:hover{
-  color: white;
+  color: #c2cadb;
 }
 
 .swiper{
@@ -294,7 +293,7 @@ a{
   background-origin: padding-box, border-box;
   border-image-slice: 9; */
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 15px;
   width: 200px;
   transition: transform 0.3s ease;
 }
