@@ -55,6 +55,40 @@
 <!-- Link Swiper's CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+<!-- Add custom styles for mobile responsiveness -->
+<style>
+  @media (max-width: 480px) {
+    .team-box {
+      text-align: center;
+      padding: 10px;
+    }
+    .t-b-text {
+      font-size: 14px;
+    }
+    .t-b-img img {
+      width: 100%;
+      height: auto;
+    }
+    .contact-card {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .contact-card img {
+      width: 100%;
+      height: auto;
+    }
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #team h3 {
+      font-size: 18px;
+      white-space: nowrap;
+    }
+  }
+</style>
+
 </head>
 
 <body>
@@ -797,6 +831,10 @@
         spaceBetween: 10,
         centeredSlides: true,
         speed: 200, // More reduced speed for phone view
+      },
+      480: {
+        slidesPerView: 1,
+        spaceBetween: 10,
       },
       640: {
         slidesPerView: 2,
