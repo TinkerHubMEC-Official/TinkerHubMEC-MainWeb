@@ -82,8 +82,24 @@
       flex-direction: column;
       align-items: center;
     }
-    #team h3 {
-      font-size: 18px;
+    #team h1 {
+      font-size: 2em; /* Adjusted font size for smaller screens */
+      white-space: nowrap;
+    }
+    /* Add pagination for coreSwiper in mobile view */
+    .coreSwiper .swiper-pagination {
+      display: block;
+    }
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    #team h1 {
+      font-size: 2.5em; /* Adjusted font size for medium screens */
+      white-space: nowrap;
+    }
+  }
+  @media (min-width: 769px) {
+    #team h1 {
+      font-size: 3em; /* Increased font size for larger screens */
       white-space: nowrap;
     }
   }
@@ -128,7 +144,7 @@
 
 <section id="team">
   <div>
-      <h3>TinkerHub MEC Core</h3>
+      <h1>TinkerHub MEC Core</h1>
   </div>
 
 
@@ -334,7 +350,7 @@
       
       </div>
     </div>
-    
+    <div class="swiper-pagination"></div>
   </div>
   
   </section>
@@ -810,7 +826,21 @@
          depth: 120,
          modifier: 3,
          slideShadows: false,
-       }
+       },
+       pagination: {
+         el: '.swiper-pagination',
+         dynamicBullets: true,
+         clickable: true,
+       },
+       breakpoints: {
+         480: {
+           pagination: {
+             el: '.swiper-pagination',
+             dynamicBullets: true,
+             clickable: true,
+           },
+         },
+       },
      });
 
     const teamSwiper = new Swiper('.teamSwiper', {
