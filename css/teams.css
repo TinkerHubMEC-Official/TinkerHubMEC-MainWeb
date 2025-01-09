@@ -282,6 +282,7 @@ a{
   align-items: center;
   overflow: visible;
   padding: 20px;
+  width: auto; /* Ensure slides take up auto width */
 }
 
 .teamSwiper .team-box {
@@ -357,5 +358,67 @@ a{
 .teamSwiper .swiper-button-next:hover,
 .teamSwiper .swiper-button-prev:hover {
   color: #c2cadb;
+}
+
+/* Media Team */
+#media-team-desktop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#media-team-mobile {
+  display: none;
+}
+
+/* Design Team */
+#design-team-desktop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#design-team-mobile {
+  display: none;
+}
+
+/* Content Team */
+#content-team-desktop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#content-team-mobile {
+  display: none;
+}
+
+@media (max-width: 765px) {
+  /* Media Team */
+  #media-team-desktop {
+    display: none;
+  }
+
+  #media-team-mobile {
+    display: block;
+  }
+
+  /* Design Team */
+  #design-team-desktop {
+    display: none;
+  }
+
+  #design-team-mobile {
+    display: block;
+  }
+
+  /* Content Team */
+  #content-team-desktop {
+    display: none;
+  }
+
+  #content-team-mobile {
+    display: block;
+  }
 }
 

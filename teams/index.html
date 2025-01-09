@@ -1547,15 +1547,25 @@
           nextEl: ".team-button-next",
           prevEl: ".team-button-prev",
         },
-        speed: 500, // Smooth scrolling speed
-        centeredSlides: true, // Center the slides
-        loopAdditionalSlides: 1, // Ensure smooth looping
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+          clickable: true,
+        },
+        speed: 500,
+        centeredSlides: true,
+        loopAdditionalSlides: 1,
         breakpoints: {
           320: {
             slidesPerView: 1,
             spaceBetween: 10,
             centeredSlides: true,
-            speed: 200, // More reduced speed for phone view
+            speed: 200,
+            pagination: {
+              el: ".swiper-pagination",
+              dynamicBullets: true,
+              clickable: true,
+            }
           },
           480: {
             slidesPerView: 1,
@@ -1616,38 +1626,46 @@
 
       const designSwiper = new Swiper(".designSwiper", {
         loop: true,
-        
-
-        slidesPerView: 1,
-        spaceBetween: 20,
+        cssMode: true,
+        slidesPerView: 5,
+        spaceBetween: 10,
+        slideShadows: false,
         navigation: {
           nextEl: ".design-button-next",
           prevEl: ".design-button-prev",
         },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        effect: 'slide',
-        speed: 400,
-        grabCursor: true,
+        speed: 500, // Smooth scrolling speed
+        centeredSlides: true, // Center the slides
+        loopAdditionalSlides: 1, // Ensure smooth looping
         breakpoints: {
-          // when window width is >= 768px
-          768: {
-            slidesPerView: 4,
-            spaceBetween: 20,
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            centeredSlides: true,
+            speed: 200, // More reduced speed for phone view
+            pagination: {
+              el: ".swiper-pagination",
+              dynamicBullets: true,
+              clickable: true,
+            }
           },
-          // when window width is >= 480px
           480: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          640: {
             slidesPerView: 2,
-            spaceBetween: 20,
-          }
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+          },
         },
-        on: {
-          init: function () {
-            this.slideTo(0, 0); // Start from first slide
-          }
-        }
       });
 
       const contentSwiper = new Swiper(".contentSwiper", {
