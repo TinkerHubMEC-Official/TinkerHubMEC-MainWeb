@@ -290,8 +290,16 @@ social-icons i:hover {
 
   .designSwiper .swiper-button-next,
   .designSwiper .swiper-button-prev {
-    display: block;
+    position: absolute;
     top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
   }
   
   .designSwiper .swiper-pagination {
