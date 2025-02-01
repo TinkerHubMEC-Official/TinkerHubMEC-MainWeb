@@ -1627,22 +1627,23 @@
       const designSwiper = new Swiper(".designSwiper", {
         loop: true,
         cssMode: true,
-        slidesPerView: 5,
+        slidesPerView: 1,
         spaceBetween: 10,
-        slideShadows: false,
         navigation: {
           nextEl: ".design-button-next",
           prevEl: ".design-button-prev",
         },
-        speed: 500, // Smooth scrolling speed
-        centeredSlides: true, // Center the slides
-        loopAdditionalSlides: 1, // Ensure smooth looping
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+          clickable: true,
+        },
         breakpoints: {
           320: {
             slidesPerView: 1,
             spaceBetween: 10,
             centeredSlides: true,
-            speed: 200, // More reduced speed for phone view
+            speed: 200,
             pagination: {
               el: ".swiper-pagination",
               dynamicBullets: true,
