@@ -42,7 +42,7 @@ body {
     transition: color 0.3s ease;
 }
 
-.social-icons i:hover {
+social-icons i:hover {
     color: white;
 }
 
@@ -69,26 +69,33 @@ body {
 .contact-card {
     margin: 10px 20px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 20px;
     color: white;
     text-align: center;
     padding: 20px;
     width: 200px;
+    border: 4px solid transparent;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
-
 .contact-card:hover {
-    transform: scale(1.1); /* Expand the card */
-    z-index: 10;
+    transform: scale(1.05);
+    will-change: transform;
 }
 
 .contact-card img {
-    width: 150px; /* Increase the width */
-    height: 150px; /* Increase the height */
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    margin-bottom: 10px;
-    
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.contact-card h4 {
+    color: #333;
+    font-size: 18px;
+    margin: 10px 0 5px;
 }
 
 .contact-icons i {
@@ -238,4 +245,344 @@ body {
 
 #prevBtn:hover, #nextBtn:hover {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Update navigation button colors for all team sections */
+.design-button-next,
+.design-button-prev,
+.media-button-next,
+.media-button-prev,
+.content-button-next,
+.content-button-prev,
+.team-button-next,
+.team-button-prev {
+  color: #c2cadb !important; /* Use the same color as tech team buttons */
+  transition: color 0.3s ease;
+}
+
+.design-button-next:hover,
+.design-button-prev:hover,
+.media-button-next:hover,
+.media-button-prev:hover,
+.content-button-next:hover,
+.content-button-prev:hover,
+.team-button-next:hover,
+.team-button-prev:hover {
+  color: #c2cadb !important;
+}
+
+@media (max-width: 425px) {
+  .designSwiper {
+    padding: 20px 0;
+    width: 100%;
+  }
+  
+  .designSwiper .swiper-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .designSwiper .contact-card {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .designSwiper .swiper-button-next,
+  .designSwiper .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .designSwiper .swiper-pagination {
+    bottom: 0;
+  }
+
+  /* Common styles for all team swipers in mobile view */
+  .designSwiper,
+  .mediaSwiper,
+  .contentSwiper {
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+  }
+  
+  .designSwiper .swiper-slide,
+  .mediaSwiper .swiper-slide,
+  .contentSwiper .swiper-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .designSwiper .contact-card,
+  .mediaSwiper .contact-card,
+  .contentSwiper .contact-card {
+    width: 200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    border: 4px solid transparent;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .designSwiper .contact-card img,
+  .mediaSwiper .contact-card img,
+  .contentSwiper .contact-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+
+  .designSwiper .contact-card h4,
+  .mediaSwiper .contact-card h4,
+  .contentSwiper .contact-card h4 {
+    color: #333;
+    font-size: 18px;
+    margin: 10px 0 5px;
+  }
+
+  .designSwiper .team-social,
+  .mediaSwiper .team-social,
+  .contentSwiper .team-social {
+    margin-top: 10px;
+  }
+
+  .designSwiper .team-social a,
+  .mediaSwiper .team-social a,
+  .contentSwiper .team-social a {
+    margin: 0 10px;
+    color: #555;
+    transition: color 0.3s ease;
+  }
+
+  .designSwiper .contact-card:hover,
+  .mediaSwiper .contact-card:hover,
+  .contentSwiper .contact-card:hover {
+    transform: scale(1.05);
+    will-change: transform;
+  }
+
+  .design-button-next,
+  .design-button-prev,
+  .media-button-next,
+  .media-button-prev,
+  .content-button-next,
+  .content-button-prev {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .design-button-prev,
+  .media-button-prev,
+  .content-button-prev {
+    left: 10px;
+  }
+
+  .design-button-next,
+  .media-button-next,
+  .content-button-next {
+    right: 10px;
+  }
+
+  .designSwiper .swiper-pagination,
+  .mediaSwiper .swiper-pagination,
+  .contentSwiper .swiper-pagination {
+    bottom: -5px;
+  }
+
+  .design-button-next,
+  .design-button-prev,
+  .media-button-next,
+  .media-button-prev,
+  .content-button-next,
+  .content-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .design-button-prev,
+  .media-button-prev,
+  .content-button-prev {
+    left: 5px;
+  }
+
+  .design-button-next,
+  .media-button-next,
+  .content-button-next {
+    right: 5px;
+  }
+
+  .designSwiper .swiper-pagination,
+  .mediaSwiper .swiper-pagination,
+  .contentSwiper .swiper-pagination {
+    bottom: -5px;
+    position: absolute;
+  }
+
+  .contact-card h4 {
+    font-size: 16px;
+    margin: 8px 0;
+  }
+
+  .team-social {
+    margin-top: 8px;
+  }
+
+  .team-social a {
+    padding: 5px;
+  }
+
+  .design-button-next,
+  .design-button-prev,
+  .media-button-next,
+  .media-button-prev,
+  .content-button-next,
+  .content-button-prev {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+
+  .design-button-prev,
+  .media-button-prev,
+  .content-button-prev {
+    left: 10px;
+  }
+
+  .design-button-next,
+  .media-button-next,
+  .content-button-next {
+    right: 10px;
+  }
+}
+
+@media (max-width: 765px) {
+  /* Common styles for all team swipers in mobile view */
+  .designSwiper,
+  .mediaSwiper,
+  .contentSwiper {
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+  }
+  
+  .designSwiper .swiper-slide,
+  .mediaSwiper .swiper-slide,
+  .contentSwiper .swiper-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Card styling */
+  .designSwiper .contact-card,
+  .mediaSwiper .contact-card,
+  .contentSwiper .contact-card {
+    width: 200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    border: 4px solid transparent;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Image styling */
+  .designSwiper .contact-card img,
+  .mediaSwiper .contact-card img,
+  .contentSwiper .contact-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+
+  /* Navigation buttons */
+  .design-button-next,
+  .design-button-prev,
+  .media-button-next,
+  .media-button-prev,
+  .content-button-next,
+  .content-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  /* Button positioning */
+  .design-button-prev,
+  .media-button-prev,
+  .content-button-prev {
+    left: 10px;
+  }
+
+  .design-button-next,
+  .media-button-next,
+  .content-button-next {
+    right: 10px;
+  }
+
+  /* Pagination styling */
+  .designSwiper .swiper-pagination,
+  .mediaSwiper .swiper-pagination,
+  .contentSwiper .swiper-pagination {
+    bottom: -5px;
+    position: absolute;
+  }
+
+  /* Show mobile views */
+  #media-team-mobile,
+  #design-team-mobile,
+  #content-team-mobile {
+    display: block;
+  }
+
+  /* Hide desktop views */
+  #media-team-desktop,
+  #design-team-desktop,
+  #content-team-desktop {
+    display: none;
+  }
 }

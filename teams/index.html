@@ -126,6 +126,18 @@
         .coreSwiper .swiper-pagination {
           display: block;
         }
+        /* Hide desktop views for Media, Design, and Content teams in mobile view */
+        #media-team-desktop,
+        #design-team-desktop,
+        #content-team-desktop {
+          display: none;
+        }
+        /* Show mobile views for Media, Design, and Content teams in mobile view */
+        #media-team-mobile,
+        #design-team-mobile,
+        #content-team-mobile {
+          display: block;
+        }
       }
       @media (min-width: 481px) and (max-width: 768px) {
         #team h1 {
@@ -137,6 +149,18 @@
         #team h1 {
           font-size: 3em; /* Increased font size for larger screens */
           white-space: nowrap;
+        }
+        /* Show desktop views for Media, Design, and Content teams in desktop view */
+        #media-team-desktop,
+        #design-team-desktop,
+        #content-team-desktop {
+          display: flex;
+        }
+        /* Hide mobile views for Media, Design, and Content teams in desktop view */
+        #media-team-mobile,
+        #design-team-mobile,
+        #content-team-mobile {
+          display: none;
         }
       }
     </style>
@@ -946,7 +970,7 @@
         <h2>Design Team</h2>
       </div>
 
-      <div class="contact-container">
+      <div id="design-team-desktop" class="contact-container">
         <!-- Contact Cards for Design Team -->
         <div class="contact-card">
           <img src="../img/TeamMembersPics/sephan.jpg" alt="Sephan Chacko" />
@@ -1028,11 +1052,110 @@
           </div>
         </div>
       </div>
+
+      <div id="design-team-mobile" class="swiper designSwiper">
+        <div class="swiper-wrapper">
+          <!-- Contact Cards for Design Team -->
+          <div class="swiper-slide">
+            <div class="contact-card">
+              <img src="../img/TeamMembersPics/sephan.jpg" alt="Sephan Chacko" />
+              <h4>Sephan Chacko</h4>
+              <p></p>
+              <div class="team-social">
+                <a
+                  href="https://www.instagram.com/sephan_chacko/profilecard/?igsh=cWd5eGh6em5vZzQy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/sephan-chacko-65aaa829b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="contact-card">
+              <img src="../img/TeamMembersPics/janita.jpg" alt="Janita Jolly" />
+              <h4>Janeeta Jolly</h4>
+              <p></p>
+              <div class="team-social">
+                <a
+                  href="https://www.instagram.com/janeetajolly/profilecard/?igsh=MWN5Z2IwdWlmb293Mg=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/janeeta-jolly/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="contact-card">
+              <img
+                src="../img/TeamMembersPics/Malavika1.jpg"
+                alt="Malavika Panicker" />
+              <h4>Malavika Panicker</h4>
+              <p></p>
+              <div class="team-social">
+                <a
+                  href="https://www.instagram.com/malavikapanicker_/profilecard/?igsh=MTBiYWl6MTY2Nzc1aw=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/malavika-panicker-5676a7319?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="contact-card">
+              <img src="../img/TeamMembersPics/Steffi.PNG" alt="Steffi" />
+              <h4>Steffi</h4>
+              <p></p>
+              <div class="team-social">
+                <a
+                  href="https://www.instagram.com/steffilazar01?igsh=MTMxdXBpdHh0OWw5ag=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  href="http://linkedin.com/in/steffi-lazar-b1577b291"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next design-button-next"></div>
+        <div class="swiper-button-prev design-button-prev"></div>
+      </div>
+
       <div>
         <h2>Media Team</h2>
       </div>
 
-      <div class="contact-container">
+      <div id="media-team-desktop" class="contact-container">
         <!-- Contact Cards for Media Team -->
         <div class="contact-card">
           <img src="../img/TeamMembersPics/amalmanoj.jpg" alt="Amal Manoj C" />
@@ -1094,12 +1217,87 @@
         </div>
       </div>
 
+      <div id="media-team-mobile" class="swiper mediaSwiper">
+        <div class="swiper-wrapper">
+          <!-- Contact Cards for Media Team -->
+          <div class="swiper-slide">
+            <div class="contact-card">
+              <img src="../img/TeamMembersPics/amalmanoj.jpg" alt="Amal Manoj C" />
+              <h4>Amal Manoj C</h4>
+              <p></p>
+              <div class="team-social">
+                <a
+                  href="https://www.instagram.com/zenn_zer0/profilecard/?igsh=emMyeWlnY2tteHJ4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/amal-manoj-c-b4b054284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="contact-card">
+              <img src="../img/TeamMembersPics/George.jpg" alt="George Thomas" />
+              <h4>George Thomas</h4>
+              <p></p>
+              <div class="team-social">
+                <a
+                  href="https://www.instagram.com/george_t_code_?igsh=MWRmNzRyNTh5M3hydw=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  href="http://www.linkedin.com/in/geo--44577t"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="contact-card">
+              <img src="../img/TeamMembersPics/Aaron Joy2.jpg" alt="Aaron Joy" />
+              <h4>Aaron Joy</h4>
+              <p></p>
+              <div class="team-social">
+                <a
+                  href="https://www.instagram.com/aar_onjv/profilecard/?igsh=MXAxZnQ5bWM5a3hjZg=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/aaron-joy-289084293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next media-button-next"></div>
+        <div class="swiper-button-prev media-button-prev"></div>
+      </div>
+
       <!-- Content Team -->
       <div>
         <h2>Content Team</h2>
       </div>
 
-      <div class="contact-container">
+      <div id="content-team-desktop" class="contact-container">
         <!-- Contact Cards for Content Team -->
         <div class="contact-card">
           <img
@@ -1142,6 +1340,62 @@
             ></a>
           </div>
         </div>
+      </div>
+
+      <div id="content-team-mobile" class="swiper contentSwiper">
+        <div class="swiper-wrapper">
+          <!-- Contact Cards for Content Team -->
+          <div class="swiper-slide">
+            <div class="contact-card">
+              <img
+                src="../img/TeamMembersPics/krishnampai.jpg"
+                alt="Krishna M Pai" />
+              <h4>Krishna M Pai</h4>
+              <p></p>
+              <div class="team-social">
+                <a
+                  href="https://www.instagram.com/krishnaa.pai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/krishnaa-m-pai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="contact-card">
+              <img src="../img/TeamMembersPics/minnah.jpg" alt="Minnah Nida" />
+              <h4>Minnah Nida</h4>
+              <p></p>
+
+              <div class="team-social">
+                <a
+                  href="https://www.instagram.com/invites/contact/?igsh=11q9bs9ofqgyf&utm_content=skz5j88"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/minnah-nida-656502329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next content-button-next"></div>
+        <div class="swiper-button-prev content-button-prev"></div>
       </div>
     </div>
 
@@ -1293,15 +1547,146 @@
           nextEl: ".team-button-next",
           prevEl: ".team-button-prev",
         },
-        speed: 500, // Smooth scrolling speed
-        centeredSlides: true, // Center the slides
-        loopAdditionalSlides: 1, // Ensure smooth looping
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+          clickable: true,
+        },
+        speed: 500,
+        centeredSlides: true,
+        loopAdditionalSlides: 1,
         breakpoints: {
           320: {
             slidesPerView: 1,
             spaceBetween: 10,
             centeredSlides: true,
-            speed: 200, // More reduced speed for phone view
+            speed: 200,
+            pagination: {
+              el: ".swiper-pagination",
+              dynamicBullets: true,
+              clickable: true,
+            }
+          },
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+          },
+        },
+      });
+
+      const mediaSwiper = new Swiper(".mediaSwiper", {
+        loop: true,
+        cssMode: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".media-button-next",
+          prevEl: ".media-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+          clickable: true,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+          },
+        },
+      });
+
+      const designSwiper = new Swiper(".designSwiper", {
+        loop: true,
+        cssMode: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".design-button-next",
+          prevEl: ".design-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+          clickable: true,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            centeredSlides: true,
+            speed: 200,
+            pagination: {
+              el: ".swiper-pagination",
+              dynamicBullets: true,
+              clickable: true,
+            }
+          },
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+          },
+        },
+      });
+
+      const contentSwiper = new Swiper(".contentSwiper", {
+        loop: true,
+        cssMode: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".content-button-next",
+          prevEl: ".content-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+          clickable: true,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
           },
           480: {
             slidesPerView: 1,
